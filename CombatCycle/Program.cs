@@ -9,8 +9,6 @@ namespace CombatCycle1 {
         public static int spiderHP = 100;
         public static string youdid = null;
         public static int lucky = 3;
-
-
         public static string action() {
             
             switch(act) {
@@ -51,8 +49,6 @@ namespace CombatCycle1 {
 
             } else if (luck == 1) youdid = "The spider attacked you for " + damageS + "HP.";
             else youdid = "You attacked the spider for " + damageP + "HP.";
-            
-
         }
         public static void dodge() {
             Random ran = new Random();
@@ -71,19 +67,15 @@ namespace CombatCycle1 {
 
             } else if (luck == 1) youdid = "You couldn't dodge that spiders attack! The spider deals " + damageS + "HP of damage.";
             else youdid = "You dodged the spider! close one!";
-            
-
         }
         static void Main(string[] args) {
                 game();
         }
-
         static void game() {
             while (dead == false) {
                 spider();
             }
         }
-        
         static void spider() {
 
             if (intro == true) {
@@ -96,14 +88,12 @@ namespace CombatCycle1 {
 
                 if (dead == false) {
                                     
-                    Console.WriteLine("Player HP: " +playerHP);
-                    Console.WriteLine("Spider HP:" + spiderHP);
+                    Console.WriteLine("Player HP: " + playerHP);
+                    Console.WriteLine("Spider HP: " + spiderHP);
                     Console.WriteLine();
                     Console.WriteLine("Now would you like to attack, dodge or flee? (attack, dodge, flee)");
                 }
             }
-           
-
             bool returnError = true;
             while(returnError == true && dead == false) {
                 returnError = false;
@@ -124,7 +114,6 @@ namespace CombatCycle1 {
                 }
             }
             intro = false;
-
         }
     }
 }
