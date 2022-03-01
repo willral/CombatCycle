@@ -9,8 +9,8 @@ namespace CombatCycle1 {
         public static int spiderHP = 100;
         public static string youdid = null;
         public static int lucky = 3;
+
         public static string action() {
-            
             switch(act) {
                 case 1:
                     //attack
